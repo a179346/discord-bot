@@ -19,7 +19,7 @@ bot.on('message', async (msg) => {
     const guildId = msg.guild.id;
     const playeId = uuidv4();
     inChannel[guildId] = playeId;
-
+    
     voiceChannel.join()
       .then((connection) => {
         const dispatcher = connection.play('./mp3/mepu.mp3', { volume: 0.3 });
