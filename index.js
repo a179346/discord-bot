@@ -14,13 +14,13 @@ bot.on('message', async (msg) => {
   if (!msg.content.includes('咩噗')) return;
   const voiceChannel = msg.member.voice.channel;
   if (!voiceChannel) {
-    msg.reply('你必須先加入語音頻道');
+    msg.reply('咩噗');
     return;
   }
 
   voiceChannel.join()
     .then((connection) => {
-      const dispatcher = connection.play('./mp3/ball.mp3');
+      const dispatcher = connection.play('./mp3/mepu.mp3');
       dispatcher.on('end', () => {
         voiceChannel.leave();
       });
