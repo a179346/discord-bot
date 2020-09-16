@@ -14,10 +14,8 @@ bot.on('message', async (msg) => {
     if (msg.author.bot) return;
     if (!msg.content.includes('咩噗')) return;
     const voiceChannel = msg.member.voice.channel;
-    if (!voiceChannel) {
-      msg.reply('咩噗');
-      return;
-    }
+    if (!voiceChannel) return;
+
     const guildId = msg.guild.id;
     const playeId = uuidv4();
     inChannel[guildId] = playeId;
