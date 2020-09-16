@@ -30,9 +30,11 @@ class Music {
     // 播放音樂
     this.dispatcher[guildId] = this.connection[guildId].play('../mp3/ball.mp3', { volume: 0.5 });
 
+    console.log('music start');
     // 歌曲播放結束時的事件
     const self = this;
     this.dispatcher[guildId].on('finish', () => {
+      console.log('music end');
       self.leave(guildId);
     });
   }

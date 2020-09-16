@@ -1,9 +1,9 @@
 require('./system/env');
+require('./server');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const Music = require('./utils/Music');
 const music = new Music();
-
 
 bot.on('ready', () => {
   console.info('Successfully logged in!');
