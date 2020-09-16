@@ -1,0 +1,30 @@
+{
+  "name": "discord-bot-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a179346/discord-bot.git"
+  },
+  "keywords": [
+    "disbord",
+    "bot",
+    "discord-bot",
+    "server"
+  ],
+  "author": "a179346",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a179346/discord-bot/issues"
+  },
+  "homepage": "https://github.com/a179346/discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "ffmpeg-static": "^4.2.7"
+  }
+}
