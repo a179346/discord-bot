@@ -20,6 +20,7 @@ bot.on('message', async (msg) => {
     const playeId = uuidv4();
     inChannel[guildId] = playeId;
     
+    console.log('play music');
     voiceChannel.join()
       .then((connection) => {
         const dispatcher = connection.play('./mp3/mepu.mp3', { volume: 0.3 });
