@@ -20,9 +20,11 @@ bot.on('message', async (msg) => {
 
   voiceChannel.join()
     .then((connection) => {
-      const dispatcher = connection.play('./mp3/mepu.mp3');
-      dispatcher.on('end', () => {
-        voiceChannel.leave();
+      const dispatcher = connection.play('./mp3/mepu.mp3', { volume: 0.3 });
+      dispatcher.on('finish', () => {
+        setTimeout(() => {
+          voiceChannel.leave();
+        }, 4000);
       });
     })
     .catch((err) => console.log(err));
